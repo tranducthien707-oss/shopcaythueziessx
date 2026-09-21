@@ -1,0 +1,1066 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blox Fruit Services - Shop Cày Thuê Siêu Cấp Full 16 Danh Mục</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-primary: #0b0f19;
+            --bg-secondary: #151d30;
+            --bg-card: #1e293b;
+            --bg-card-hover: #26354a;
+            --accent-color: #38bdf8;
+            --accent-hover: #0284c7;
+            --accent-glow: rgba(56, 189, 248, 0.25);
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --border-color: #334155;
+            --success-color: #22c55e;
+            --danger-color: #ef4444;
+            --warning-color: #f59e0b;
+            --purple-accent: #a855f7;
+            --shadow-lg: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; }
+        body { 
+            background-color: var(--bg-primary); 
+            color: var(--text-main); 
+            padding-bottom: 110px; 
+            min-height: 100vh;
+            line-height: 1.5;
+        }
+
+        /* Scrollbar Custom */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--bg-primary); }
+        ::-webkit-scrollbar-thumb { background: var(--border-color); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--accent-color); }
+
+        /* Header & Nav */
+        header {
+            background-color: rgba(21, 29, 48, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 15px 30px;
+            border-bottom: 2px solid var(--accent-color);
+            position: sticky; top: 0; z-index: 100;
+            display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+        }
+
+        .brand-logo { display: flex; align-items: center; gap: 10px; cursor: pointer; }
+        .brand-logo i { font-size: 1.8rem; color: var(--accent-color); filter: drop-shadow(0 0 8px var(--accent-color)); }
+        header h1 { color: var(--text-main); font-size: 1.5rem; font-weight: 800; }
+        header h1 span { color: var(--accent-color); }
+
+        .nav-links { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+        
+        /* Buttons */
+        .btn {
+            padding: 9px 18px; border-radius: 8px; cursor: pointer; font-weight: 700; border: none;
+            color: white; transition: all 0.25s ease; font-size: 0.9rem;
+            display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+        }
+        .btn:active { transform: scale(0.97); }
+        .btn-primary { background: linear-gradient(135deg, var(--accent-color), #0284c7); color: #000; }
+        .btn-primary:hover { background: linear-gradient(135deg, #7dd3fc, var(--accent-color)); box-shadow: 0 0 15px var(--accent-glow); }
+        .btn-success { background: linear-gradient(135deg, var(--success-color), #15803d); color: white; }
+        .btn-danger { background: linear-gradient(135deg, var(--danger-color), #b91c1c); color: white; }
+        .btn-warning { background: linear-gradient(135deg, var(--warning-color), #b45309); color: #000; }
+        .btn-purple { background: linear-gradient(135deg, var(--purple-accent), #6b21a8); color: white; }
+        
+        .balance-badge { 
+            background: rgba(34, 197, 94, 0.15); 
+            border: 1px solid var(--success-color);
+            color: var(--success-color); 
+            padding: 7px 14px; border-radius: 20px; font-weight: 700;
+            display: flex; align-items: center; gap: 6px;
+        }
+
+        .container { max-width: 1280px; margin: 25px auto; padding: 0 20px; }
+        .section { display: none; opacity: 0; transition: opacity 0.3s ease; }
+        .section.active { display: block; opacity: 1; }
+
+        /* Hero Banner */
+        .hero-banner {
+            background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.9)), radial-gradient(circle at top right, rgba(56, 189, 248, 0.2), transparent 50%);
+            border-radius: 16px; padding: 35px; margin-bottom: 25px;
+            border: 1px solid var(--border-color); text-align: center;
+        }
+        .hero-banner h2 { font-size: 2rem; color: var(--accent-color); margin-bottom: 10px; font-weight: 800; }
+        .hero-banner p { color: var(--text-muted); max-width: 700px; margin: 0 auto 20px auto; }
+        
+        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px; margin-top: 20px; }
+        .stat-card { background: var(--bg-secondary); padding: 15px; border-radius: 10px; border: 1px solid var(--border-color); }
+        .stat-card .val { font-size: 1.4rem; font-weight: bold; color: var(--accent-color); }
+        .stat-card .lbl { font-size: 0.8rem; color: var(--text-muted); }
+
+        /* Search Input */
+        .controls-wrapper { display: flex; gap: 15px; margin-bottom: 25px; flex-wrap: wrap; }
+        .search-input {
+            flex: 1; min-width: 280px; padding: 14px 20px; border-radius: 10px;
+            border: 1px solid var(--border-color); background-color: var(--bg-secondary);
+            color: var(--text-main); font-size: 1rem; outline: none; transition: all 0.2s;
+        }
+        .search-input:focus { border-color: var(--accent-color); box-shadow: 0 0 10px var(--accent-glow); }
+
+        .category-title {
+            color: var(--accent-color); font-size: 1.3rem; margin: 35px 0 18px 0;
+            padding-bottom: 10px; border-bottom: 2px solid var(--border-color);
+            display: flex; align-items: center; gap: 10px; font-weight: 700;
+        }
+
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 18px; }
+
+        /* Service Cards */
+        .service-card {
+            background-color: var(--bg-secondary); border: 1px solid var(--border-color);
+            border-radius: 12px; padding: 18px; display: flex; flex-direction: column; justify-content: space-between;
+            transition: all 0.25s ease; position: relative; overflow: hidden;
+        }
+        .service-card:hover { border-color: var(--accent-color); transform: translateY(-4px); box-shadow: var(--shadow-lg); background-color: var(--bg-card-hover); }
+        .service-name { font-size: 1rem; font-weight: 700; margin-bottom: 10px; color: var(--text-main); line-height: 1.4; }
+        .service-price { color: var(--success-color); font-weight: 800; font-size: 1.2rem; margin-bottom: 15px; }
+
+        /* Floating Cart Bar */
+        .cart-bar {
+            position: fixed; bottom: 0; left: 0; right: 0;
+            background-color: rgba(21, 29, 48, 0.95); backdrop-filter: blur(12px);
+            border-top: 2px solid var(--accent-color);
+            padding: 16px 30px; display: flex; justify-content: space-between; align-items: center; z-index: 100;
+        }
+        .cart-info { display: flex; align-items: center; gap: 15px; font-size: 1.05rem; }
+        .cart-total { color: var(--success-color); font-weight: 800; font-size: 1.3rem; }
+
+        /* Modals & Forms */
+        .modal {
+            display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background-color: rgba(0,0,0,0.85); z-index: 200; justify-content: center; align-items: center;
+            backdrop-filter: blur(5px); padding: 15px;
+        }
+        .modal-content, .auth-box, .dashboard-box {
+            background-color: var(--bg-secondary); padding: 30px; border-radius: 14px;
+            max-width: 650px; width: 100%; max-height: 90vh; overflow-y: auto; border: 1px solid var(--accent-color);
+            box-shadow: var(--shadow-lg); margin: 0 auto;
+        }
+        .dashboard-box { max-width: 1100px; margin-bottom: 25px; border-color: var(--border-color); }
+
+        .form-group { margin-bottom: 18px; }
+        .form-group label { display: block; margin-bottom: 6px; color: var(--text-muted); font-size: 0.9rem; font-weight: 600; }
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%; padding: 12px; border-radius: 8px; border: 1px solid var(--border-color);
+            background-color: var(--bg-primary); color: var(--text-main); outline: none; font-size: 0.95rem;
+        }
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--accent-color); }
+
+        /* Tables */
+        .table-responsive { overflow-x: auto; margin-top: 15px; border-radius: 8px; border: 1px solid var(--border-color); }
+        table { width: 100%; border-collapse: collapse; font-size: 0.9rem; text-align: left; }
+        th, td { padding: 12px 15px; border-bottom: 1px solid var(--border-color); }
+        th { background-color: var(--bg-card); color: var(--accent-color); font-weight: 700; white-space: nowrap; }
+
+        .status-badge { padding: 4px 10px; border-radius: 12px; font-size: 0.8rem; font-weight: bold; display: inline-block; }
+        .status-pending { background: rgba(245, 158, 11, 0.2); color: var(--warning-color); border: 1px solid var(--warning-color); }
+        .status-completed { background: rgba(34, 197, 94, 0.2); color: var(--success-color); border: 1px solid var(--success-color); }
+        .status-rejected { background: rgba(239, 68, 68, 0.2); color: var(--danger-color); border: 1px solid var(--danger-color); }
+
+        .cart-list-item { display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-bottom: 1px solid var(--border-color); }
+        .admin-item-row { display: grid; grid-template-columns: 2fr 1fr 80px; gap: 10px; align-items: center; margin-bottom: 10px; padding: 8px; background: var(--bg-primary); border-radius: 6px; }
+
+        /* Toasts */
+        #toastContainer { position: fixed; top: 20px; right: 20px; z-index: 300; display: flex; flex-direction: column; gap: 10px; }
+        .toast {
+            min-width: 280px; padding: 14px 20px; border-radius: 8px; background: var(--bg-secondary);
+            color: #fff; font-weight: 600; box-shadow: var(--shadow-lg); display: flex; align-items: center;
+            gap: 12px; border-left: 5px solid var(--accent-color); animation: slideIn 0.3s forwards;
+        }
+        .toast.success { border-left-color: var(--success-color); }
+        .toast.error { border-left-color: var(--danger-color); }
+        .toast.warning { border-left-color: var(--warning-color); }
+        
+        @keyframes slideIn { from { transform: translateX(100%); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
+
+        @media (max-width: 768px) {
+            header { padding: 12px 15px; }
+            .cart-bar { padding: 12px 15px; flex-direction: column; gap: 10px; align-items: stretch; text-align: center; }
+            .cart-info { justify-content: center; }
+            .hero-banner { padding: 20px; }
+            .admin-item-row { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="toastContainer"></div>
+
+    <!-- NAVBAR -->
+    <header>
+        <div class="brand-logo" onclick="showSection('shopSection')">
+            <i class="fa-solid fa-gamepad"></i>
+            <h1>Blox Fruit <span>Shop Pro</span></h1>
+        </div>
+        
+        <div class="nav-links" id="navGuest">
+            <button class="btn btn-primary" onclick="showSection('authSection')"><i class="fa-solid fa-right-to-bracket"></i> Đăng Nhập / Đăng Ký</button>
+        </div>
+        
+        <div class="nav-links" id="navUser" style="display: none;">
+            <div class="balance-badge">
+                <i class="fa-solid fa-wallet"></i>
+                <span id="userBalanceDisplay">0</span>đ
+            </div>
+            <button class="btn btn-success" onclick="showSection('dashboardSection')"><i class="fa-solid fa-credit-card"></i> Ví & Nạp Thẻ</button>
+            <button class="btn btn-purple" onclick="showSection('myOrdersSection')"><i class="fa-solid fa-receipt"></i> Đơn Hàng Của Tôi</button>
+            <button class="btn btn-warning" id="btnAdminNav" style="display: none;" onclick="showSection('adminSection')"><i class="fa-solid fa-user-shield"></i> Quản Trị Admin</button>
+            <button class="btn btn-danger" onclick="logout()"><i class="fa-solid fa-right-from-bracket"></i></button>
+        </div>
+    </header>
+
+    <!-- SECTION 1: AUTH -->
+    <div id="authSection" class="section container">
+        <div class="auth-box">
+            <h2 style="color: var(--accent-color); text-align: center; margin-bottom: 25px; font-size: 1.6rem;">
+                <i class="fa-solid fa-user-lock"></i> Tài Khoản Shop
+            </h2>
+            <div class="form-group">
+                <label><i class="fa-solid fa-user"></i> Tên đăng nhập:</label>
+                <input type="text" id="authUsername" placeholder="Nhập tên tài khoản...">
+            </div>
+            <div class="form-group">
+                <label><i class="fa-solid fa-lock"></i> Mật khẩu:</label>
+                <input type="password" id="authPassword" placeholder="Nhập mật khẩu...">
+            </div>
+            <div style="display: flex; gap: 12px; margin-top: 25px;">
+                <button class="btn btn-primary" style="flex: 1; padding: 12px;" onclick="login()"><i class="fa-solid fa-right-to-bracket"></i> Đăng Nhập</button>
+                <button class="btn btn-success" style="flex: 1; padding: 12px;" onclick="register()"><i class="fa-solid fa-user-plus"></i> Đăng Ký Mới</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECTION 2: SHOP FULL 16 DANH MỤC -->
+    <div id="shopSection" class="section active container">
+        <div class="hero-banner">
+            <h2>HỆ THỐNG CÀY THUÊ BLOX FRUIT UY TÍN HÀNG ĐẦU</h2>
+            <p>Xử lý tự động - Siêu tốc - Bảo mật thông tin tuyệt đối. Hỗ trợ đầy đủ 16 danh mục dịch vụ mới nhất!</p>
+            <div class="stats-grid">
+                <div class="stat-card"><div class="val">100%</div><div class="lbl">Bảo Mật Nick</div></div>
+                <div class="stat-card"><div class="val">15 - 30p</div><div class="lbl">Tốc Độ Hoàn Thành</div></div>
+                <div class="stat-card"><div class="val">50,000+</div><div class="lbl">Đơn Hàng Thành Công</div></div>
+                <div class="stat-card"><div class="val">24/7</div><div class="lbl">Hỗ Trợ Trực Tuyến</div></div>
+            </div>
+        </div>
+
+        <div class="controls-wrapper">
+            <input type="text" id="searchInput" class="search-input" placeholder="🔍 Tìm kiếm dịch vụ (V4, Godhuman, CDK, Soul Guitar, Kitsune, Sea Event...)" onkeyup="filterServices()">
+        </div>
+
+        <div id="servicesContainer"></div>
+
+        <!-- Floating Cart Bar -->
+        <div class="cart-bar" id="cartBar" style="display: none;">
+            <div class="cart-info">
+                <i class="fa-solid fa-cart-shopping" style="color: var(--accent-color); font-size: 1.4rem;"></i>
+                <div>Đã chọn: <span id="cartCount" style="font-weight: bold; color: var(--accent-color);">0</span> dịch vụ | Tổng tiền: <span class="cart-total" id="cartTotal">0đ</span></div>
+            </div>
+            <button class="btn btn-success" style="padding: 12px 25px;" onclick="openCheckoutModal()"><i class="fa-solid fa-check-circle"></i> Thanh Toán Ngay</button>
+        </div>
+    </div>
+
+    <!-- SECTION 3: DASHBOARD (NẠP THẺ) -->
+    <div id="dashboardSection" class="section container">
+        <div class="dashboard-box">
+            <h2 style="color: var(--accent-color); border-bottom: 1px solid var(--border-color); padding-bottom: 12px; margin-bottom: 20px;">
+                <i class="fa-solid fa-money-bill-transfer"></i> Nạp Thẻ Cào Tự Động
+            </h2>
+            <div class="form-group">
+                <label>Nhà mạng:</label>
+                <select id="cardType">
+                    <option value="Viettel">Viettel (Khuyên dùng)</option>
+                    <option value="Mobifone">Mobifone</option>
+                    <option value="Vinaphone">Vinaphone</option>
+                    <option value="Vietnamobile">Vietnamobile</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Mệnh giá:</label>
+                <select id="cardAmount">
+                    <option value="10000">10.000 VNĐ</option>
+                    <option value="20000">20.000 VNĐ</option>
+                    <option value="50000">50.000 VNĐ</option>
+                    <option value="100000">100.000 VNĐ</option>
+                    <option value="200000">200.000 VNĐ</option>
+                    <option value="500000">500.000 VNĐ</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Mã thẻ (PIN):</label>
+                <input type="text" id="cardCode" placeholder="Nhập mã thẻ cào">
+            </div>
+            <div class="form-group">
+                <label>Số Seri:</label>
+                <input type="text" id="cardSeri" placeholder="Nhập số seri thẻ">
+            </div>
+            <button class="btn btn-success" style="width: 100%; padding: 14px; font-size: 1rem;" onclick="submitCard()"><i class="fa-solid fa-paper-plane"></i> Gửi Thẻ Cào (Duyệt Tự Động)</button>
+        </div>
+
+        <div class="dashboard-box">
+            <h2 style="color: var(--warning-color); border-bottom: 1px solid var(--border-color); padding-bottom: 12px; margin-bottom: 15px;">
+                <i class="fa-solid fa-clock-rotate-left"></i> Lịch Sử Nạp Thẻ Của Bạn
+            </h2>
+            <div class="table-responsive">
+                <table>
+                    <thead><tr><th>Thời gian</th><th>Loại</th><th>Mệnh giá</th><th>Mã thẻ</th><th>Seri</th><th>Trạng thái</th></tr></thead>
+                    <tbody id="userCardHistoryTable"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECTION 4: MY ORDERS -->
+    <div id="myOrdersSection" class="section container">
+        <div class="dashboard-box">
+            <h2 style="color: var(--accent-color); border-bottom: 1px solid var(--border-color); padding-bottom: 12px; margin-bottom: 15px;">
+                <i class="fa-solid fa-box-open"></i> Lịch Sử Đơn Hàng Cày Thuê
+            </h2>
+            <div class="table-responsive">
+                <table>
+                    <thead><tr><th>Mã Đơn</th><th>Thời gian</th><th>Tài Khoản Roblox</th><th>Dịch vụ mua</th><th>Tổng tiền</th><th>Trạng thái</th></tr></thead>
+                    <tbody id="userOrderHistoryTable"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECTION 5: ADMIN PANEL -->
+    <div id="adminSection" class="section container">
+        <div class="dashboard-box" style="border-color: var(--danger-color);">
+            <h2 style="color: var(--danger-color); margin-bottom: 15px;">
+                <i class="fa-solid fa-screwdriver-wrench"></i> QUẢN TRỊ ADMIN - SỬA BẢNG GIÁ
+            </h2>
+            <p style="color: var(--warning-color); margin-bottom: 15px; font-size: 0.9rem;">
+                * Thay đổi giá bên dưới và nhấn "Lưu Bảng Giá" để áp dụng vĩnh viễn trên hệ thống.
+            </p>
+            <div id="adminPriceContainer"></div>
+            <button class="btn btn-danger" style="width: 100%; margin-top: 20px; padding: 15px; font-size: 1.1rem;" onclick="saveAdminPrices()">
+                <i class="fa-solid fa-floppy-disk"></i> LƯU TẤT CẢ BẢNG GIÁ MỚI
+            </button>
+        </div>
+
+        <div class="dashboard-box">
+            <h2 style="color: var(--warning-color); margin-bottom: 15px;">
+                <i class="fa-solid fa-receipt"></i> QUẢN LÝ TẤT CẢ ĐƠN NẠP THẺ
+            </h2>
+            <div class="table-responsive">
+                <table>
+                    <thead><tr><th>Khách Hàng</th><th>Thời Gian</th><th>Loại</th><th>Mệnh Giá</th><th>Mã Thẻ</th><th>Seri</th><th>Trạng Thái</th><th>Hành Động</th></tr></thead>
+                    <tbody id="adminCardsTable"></tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="dashboard-box">
+            <h2 style="color: var(--accent-color); margin-bottom: 15px;">
+                <i class="fa-solid fa-list-check"></i> QUẢN LÝ TẤT CẢ ĐƠN CÀY THUÊ KHÁCH HÀNG
+            </h2>
+            <div class="table-responsive">
+                <table>
+                    <thead><tr><th>Mã Đơn</th><th>Khách Hàng</th><th>Acc Roblox</th><th>Pass Roblox</th><th>Ghi chú / 2FA</th><th>Dịch Vụ</th><th>Tổng Tiền</th><th>Trạng Thái</th><th>Hành Động</th></tr></thead>
+                    <tbody id="adminOrdersTable"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- CHECKOUT MODAL -->
+    <div class="modal" id="checkoutModal">
+        <div class="modal-content">
+            <h2 style="color: var(--accent-color); margin-bottom: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-shield-halved"></i> Xác Nhận Đơn Hàng Cày Thuê
+            </h2>
+            <div id="modalCartItems" style="margin-bottom: 15px; max-height: 180px; overflow-y: auto; padding-right: 5px;"></div>
+            <div style="text-align: right; margin-bottom: 20px; font-weight: bold; font-size: 1.1rem;">
+                Tổng tiền: <span id="modalTotal" style="color: var(--success-color);">0đ</span>
+            </div>
+            
+            <div class="form-group">
+                <label>Tài khoản Roblox / Username (*):</label>
+                <input type="text" id="robloxUser" placeholder="Nhập Tên Đăng Nhập Roblox">
+            </div>
+            <div class="form-group">
+                <label>Mật khẩu Roblox (*):</label>
+                <input type="password" id="robloxPass" placeholder="Nhập Mật Khẩu Roblox">
+            </div>
+            <div class="form-group">
+                <label>Ghi chú (Mã sao lưu 2FA / Cookie / Yêu cầu riêng):</label>
+                <textarea id="robloxNote" rows="3" placeholder="Nhập mã 2FA dự phòng để thợ cày vào nick nhanh hơn (Không bắt buộc)"></textarea>
+            </div>
+            <div style="display: flex; justify-content: flex-end; gap: 12px;">
+                <button class="btn btn-danger" onclick="closeCheckoutModal()">Hủy Bỏ</button>
+                <button class="btn btn-success" onclick="processPayment()"><i class="fa-solid fa-check"></i> Xác Nhận Mua Ngay</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const fullDatabaseGoc = [
+            {
+                category: "1. TỘC (RACE V1 -> V4)",
+                items: [
+                    { name: "Human V1 -> V4 Full", price: 150000 },
+                    { name: "Rabbit V1 -> V4 Full", price: 150000 },
+                    { name: "Shark V1 -> V4 Full", price: 150000 },
+                    { name: "Angel V1 -> V4 Full", price: 150000 },
+                    { name: "Ghoul V1 -> V4 Full", price: 200000 },
+                    { name: "Cyborg V1 -> V4 Full", price: 250000 },
+                    { name: "Draco V1 -> V4 Full", price: 300000 }
+                ]
+            },
+            {
+                category: "2. V4 GEAR & TRIAL",
+                items: [
+                    { name: "Race Gear 1 All Race", price: 30000 },
+                    { name: "Race Gear 2 All Race", price: 50000 },
+                    { name: "Race Gear 3 All Race", price: 80000 },
+                    { name: "Race Full Gear All Race", price: 150000 },
+                    { name: "Trial V4 Solo / Carry (1 Trận)", price: 40000 },
+                    { name: "Training V4 Points", price: 30000 },
+                    { name: "Awakening V4 Full Mốc", price: 200000 }
+                ]
+            },
+            {
+                category: "3. HAKI / ABILITY",
+                items: [
+                    { name: "Aura (Haki Vũ Khí V1)", price: 20000 },
+                    { name: "Full Body Aura", price: 50000 },
+                    { name: "Aura Color (Màu Haki Chiêu)", price: 30000 },
+                    { name: "Observation/Instinct V1", price: 30000 },
+                    { name: "Observation V2 (Haki Quan Sát V2)", price: 80000 },
+                    { name: "Instinct Dodge Max Mốc", price: 40000 },
+                    { name: "Flash Step (Tốc Biến)", price: 10000 },
+                    { name: "Air Jump (Nhảy Trên Không)", price: 10000 },
+                    { name: "Death Step-related Abilities", price: 50000 }
+                ]
+            },
+            {
+                category: "4. FIGHTING STYLE (13 VÕ)",
+                items: [
+                    { name: "Combat", price: 10000 },
+                    { name: "Dark Step", price: 20000 },
+                    { name: "Water Kung Fu", price: 20000 },
+                    { name: "Electric", price: 20000 },
+                    { name: "Dragon Breath", price: 30000 },
+                    { name: "Superhuman", price: 60000 },
+                    { name: "Death Step", price: 70000 },
+                    { name: "Sharkman Karate", price: 70000 },
+                    { name: "Electric Claw", price: 80000 },
+                    { name: "Dragon Talon", price: 90000 },
+                    { name: "Godhuman", price: 150000 },
+                    { name: "Sanguine Art", price: 200000 }
+                ]
+            },
+            {
+                category: "5. SWORD (KIẾM FULL 36 MÓN)",
+                items: [
+                    { name: "Katana / Cutlass / Pipe / Iron Mace", price: 10000 },
+                    { name: "Dual Katana / Triple Katana / Shark Saw", price: 15000 },
+                    { name: "Dual-Headed Blade / Wardens Sword", price: 20000 },
+                    { name: "Saber / Bisento / Soul Cane / Pole V1", price: 30000 },
+                    { name: "Pole V2", price: 60000 },
+                    { name: "Wando / Saddi / Shisui (Lấy từng kiếm)", price: 40000 },
+                    { name: "True Triple Katana (TTK Full Combo)", price: 120000 },
+                    { name: "Dark Dagger", price: 80000 },
+                    { name: "Dragon Trident", price: 50000 },
+                    { name: "Gravity Blade", price: 40000 },
+                    { name: "Spikey Trident", price: 60000 },
+                    { name: "Buddy Sword / Canvander", price: 50000 },
+                    { name: "Twin Hooks / Rengoku / Midnight Blade / Jitte", price: 40000 },
+                    { name: "Longsword / Koko", price: 40000 },
+                    { name: "Tushita Sword", price: 70000 },
+                    { name: "Yama Sword", price: 70000 },
+                    { name: "Hallow Scythe", price: 90000 },
+                    { name: "Cursed Dual Katana (CDK Quest Full)", price: 180000 },
+                    { name: "Shark Anchor", price: 120000 },
+                    { name: "Dragonheart Sword", price: 150000 },
+                    { name: "Dark Blade Quest", price: 150000 }
+                ]
+            },
+            {
+                category: "6. GUN (FULL 14 SÚNG)",
+                items: [
+                    { name: "Slingshot / Musket / Flintlock", price: 10000 },
+                    { name: "Refined Slingshot / Refined Flintlock / Cannon", price: 20000 },
+                    { name: "Kabucha Gun", price: 40000 },
+                    { name: "Acidum Rifle / Bizarre Revolver / Serpent Bow", price: 50000 },
+                    { name: "Soul Guitar Quest Full", price: 150000 },
+                    { name: "Dragonstorm / Dragonheart-related Gear", price: 120000 }
+                ]
+            },
+            {
+                category: "7. ACCESSORY / ÁO / MŨ",
+                items: [
+                    { name: "Black Cape / Coat / Pink Coat", price: 20000 },
+                    { name: "Swordsman Hat / Tomoe Ring / Usoap's Hat", price: 30000 },
+                    { name: "Warrior Helmet / Musketeer Hat / Dark Coat / Santa Hat", price: 50000 },
+                    { name: "Kitsune Mask / Kitsune Ribbon", price: 120000 },
+                    { name: "Leviathan Crown / Leviathan Shield", price: 150000 },
+                    { name: "Dragon Mantle / Dino Hood / Heart Shades", price: 80000 },
+                    { name: "Holy Crown / Pretty Helmet / Pilot Helmet", price: 40000 },
+                    { name: "Shark Tooth Necklace / T-Rex Skull / Jaw Shield", price: 60000 },
+                    { name: "Feathered Visage / Cupid's Coat / Cupid's Top Hat", price: 50000 },
+                    { name: "Frosty Helmet / Holiday Cloak / Easter Bunny Cape / Oni Helmet", price: 50000 }
+                ]
+            },
+            {
+                category: "8. DOJO BELT",
+                items: [
+                    { name: "White Belt", price: 10000 },
+                    { name: "Yellow Belt", price: 20000 },
+                    { name: "Orange Belt", price: 30000 },
+                    { name: "Green Belt", price: 40000 },
+                    { name: "Blue Belt", price: 50000 },
+                    { name: "Purple Belt", price: 60000 },
+                    { name: "Red Belt", price: 80000 }
+                ]
+            },
+            {
+                category: "9. MATERIAL (NGUYÊN LIỆU)",
+                items: [
+                    { name: "Scrap Metal / Leather / Angel Wings (x50)", price: 30000 },
+                    { name: "Bones Farm (1,000 Bones)", price: 40000 },
+                    { name: "Radioactive Material / Vampire Fang / Gunpowder", price: 40000 },
+                    { name: "Magma Ore / Fish Tail / Mystic Droplet", price: 40000 },
+                    { name: "Dragon Scale (x10)", price: 50000 },
+                    { name: "Terror Jaw / Terror Eye", price: 80000 },
+                    { name: "Leviathan Scale (x10)", price: 100000 },
+                    { name: "Cold Heart Material", price: 120000 }
+                ]
+            },
+            {
+                category: "10. ITEM / QUEST ITEM",
+                items: [
+                    { name: "God's Chalice", price: 80000 },
+                    { name: "Fist of Darkness", price: 60000 },
+                    { name: "Mirror Fractal", price: 70000 },
+                    { name: "Fire Essence / Hellfire Torch", price: 50000 },
+                    { name: "Water Key / Library Key", price: 40000 },
+                    { name: "Factory Raid-related Items", price: 30000 },
+                    { name: "Alchemist Flowers Quest", price: 20000 },
+                    { name: "Yama / Tushita Quest Items", price: 70000 },
+                    { name: "CDK Quest Items Full Chain", price: 150000 },
+                    { name: "Soul Guitar Quest Items", price: 100000 },
+                    { name: "Draco / Dojo Quest Items", price: 80000 },
+                    { name: "Leviathan Quest Materials", price: 120000 }
+                ]
+            },
+            {
+                category: "11. BOSS DROP & SPECIAL",
+                items: [
+                    { name: "Saber / Rengoku Drop", price: 40000 },
+                    { name: "Dragon Trident Drop", price: 50000 },
+                    { name: "Hallow Scythe Drop", price: 80000 },
+                    { name: "Tushita / Yama Boss Drop", price: 70000 },
+                    { name: "Buddy Sword / Canvander Drop", price: 50000 },
+                    { name: "Spikey Trident / Dark Dagger Drop", price: 80000 },
+                    { name: "Shark Anchor Drop", price: 120000 },
+                    { name: "God's Chalice Drop", price: 80000 },
+                    { name: "Leviathan Heart Drop", price: 150000 }
+                ]
+            },
+            {
+                category: "12. RAID & FRUIT AWAKENING",
+                items: [
+                    { name: "Raid Carry (Thường) - 1 Trận", price: 5000 },
+                    { name: "Dough Raid - 1 Trận", price: 15000 },
+                    { name: "Buddha Raid / Rumble Raid - 1 Trận", price: 10000 },
+                    { name: "Dragon Raid - 1 Trận", price: 20000 },
+                    { name: "Farm 10.000 Fragments", price: 30000 },
+                    { name: "Thức Tỉnh 1 Chiêu Trái", price: 15000 },
+                    { name: "Full Awakening Trái Bất Kỳ", price: 80000 }
+                ]
+            },
+            {
+                category: "13. MASTERY FARMING",
+                items: [
+                    { name: "Sword Mastery (1 -> 600)", price: 60000 },
+                    { name: "Gun Mastery (1 -> 600)", price: 60000 },
+                    { name: "Fighting Style Mastery (1 -> 600)", price: 50000 },
+                    { name: "Fruit Mastery (1 -> 600)", price: 70000 }
+                ]
+            },
+            {
+                category: "14. TIỀN & BẢNG LEVEL",
+                items: [
+                    { name: "Farm 100 Level", price: 15000 },
+                    { name: "Farm Max Level (1 -> Max)", price: 180000 },
+                    { name: "Farm 1.000.000 Beli", price: 10000 },
+                    { name: "Farm 5.000 Fragments", price: 20000 },
+                    { name: "Farm 2.000 Bones / Event Currency", price: 70000 }
+                ]
+            },
+            {
+                category: "15. PVP & BOUNTY",
+                items: [
+                    { name: "Farm 1.000.000 Bounty / Honor", price: 50000 },
+                    { name: "Elite Hunter Kill Quest (x10 Boss)", price: 40000 },
+                    { name: "Player Kill Requirement Quest", price: 30000 },
+                    { name: "V4 Trial PvP Carry", price: 50000 }
+                ]
+            },
+            {
+                category: "16. SEA EVENT",
+                items: [
+                    { name: "Săn Sea Beast (x5 Con)", price: 40000 },
+                    { name: "Săn Terror Shark", price: 50000 },
+                    { name: "Săn Leviathan Full Trip", price: 150000 },
+                    { name: "Đi Frozen Dimension Event", price: 100000 },
+                    { name: "Lấy Leviathan Heart", price: 150000 },
+                    { name: "Lấy Leviathan Crown / Shield", price: 120000 }
+                ]
+            }
+        ];
+
+        let db = JSON.parse(localStorage.getItem('bp_db')) || fullDatabaseGoc;
+        let users = JSON.parse(localStorage.getItem('bp_users')) || [];
+        let orders = JSON.parse(localStorage.getItem('bp_orders')) || [];
+        let cards = JSON.parse(localStorage.getItem('bp_cards')) || [];
+        let currentUser = JSON.parse(localStorage.getItem('bp_currentUser')) || null;
+        let cart = [];
+
+        if (!users.find(u => u.username === 'admin')) {
+            users.push({ username: 'admin', password: 'admin123456', balance: 999999999, role: 'admin' });
+            saveStorage('bp_users', users);
+        }
+        if (!localStorage.getItem('bp_db')) saveStorage('bp_db', db);
+
+        function saveStorage(key, value) { localStorage.setItem(key, JSON.stringify(value)); }
+
+        function showToast(message, type = 'info') {
+            const container = document.getElementById('toastContainer');
+            const toast = document.createElement('div');
+            toast.className = `toast ${type}`;
+            
+            let icon = 'fa-circle-info';
+            if (type === 'success') icon = 'fa-circle-check';
+            if (type === 'error') icon = 'fa-circle-xmark';
+            if (type === 'warning') icon = 'fa-triangle-exclamation';
+
+            toast.innerHTML = `<i class="fa-solid ${icon}"></i> <span>${message}</span>`;
+            container.appendChild(toast);
+
+            setTimeout(() => {
+                toast.style.animation = 'slideIn 0.3s reverse forwards';
+                setTimeout(() => toast.remove(), 300);
+            }, 3000);
+        }
+
+        function showSection(id) {
+            document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+            document.getElementById(id).classList.add('active');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            if (id === 'shopSection') renderShop();
+            if (id === 'dashboardSection') renderUserCardHistory();
+            if (id === 'myOrdersSection') renderUserOrderHistory();
+            if (id === 'adminSection') renderAdmin();
+        }
+
+        function updateNav() {
+            if (currentUser) {
+                document.getElementById('navGuest').style.display = 'none';
+                document.getElementById('navUser').style.display = 'flex';
+                document.getElementById('cartBar').style.display = cart.length > 0 ? 'flex' : 'none';
+                
+                const freshUser = users.find(u => u.username === currentUser.username);
+                if (freshUser) {
+                    currentUser.balance = freshUser.balance;
+                    saveStorage('bp_currentUser', currentUser);
+                }
+
+                document.getElementById('userBalanceDisplay').innerText = currentUser.balance.toLocaleString('vi-VN');
+                document.getElementById('btnAdminNav').style.display = (currentUser.role === 'admin') ? 'inline-flex' : 'none';
+            } else {
+                document.getElementById('navGuest').style.display = 'flex';
+                document.getElementById('navUser').style.display = 'none';
+                document.getElementById('cartBar').style.display = 'none';
+            }
+        }
+
+        function register() {
+            const u = document.getElementById('authUsername').value.trim();
+            const p = document.getElementById('authPassword').value.trim();
+            if (!u || !p) return showToast("Vui lòng điền đủ Username và Password!", "warning");
+            if (users.find(x => x.username === u)) return showToast("Tài khoản đã tồn tại!", "error");
+
+            users.push({ username: u, password: p, balance: 0, role: 'user' });
+            saveStorage('bp_users', users);
+            showToast("Đăng ký thành công! Hãy đăng nhập ngay.", "success");
+        }
+
+        function login() {
+            const u = document.getElementById('authUsername').value.trim();
+            const p = document.getElementById('authPassword').value.trim();
+            const user = users.find(x => x.username === u && x.password === p);
+
+            if (user) {
+                currentUser = user;
+                saveStorage('bp_currentUser', currentUser);
+                updateNav();
+                showToast(`Chào mừng ${currentUser.username} trở lại!`, "success");
+                showSection('shopSection');
+            } else {
+                showToast("Tài khoản hoặc mật khẩu không chính xác!", "error");
+            }
+        }
+
+        function logout() {
+            currentUser = null;
+            cart = [];
+            localStorage.removeItem('bp_currentUser');
+            updateCartUI();
+            updateNav();
+            showToast("Đã đăng xuất tài khoản.", "info");
+            showSection('shopSection');
+        }
+
+        function renderShop() {
+            const container = document.getElementById('servicesContainer');
+            container.innerHTML = '';
+
+            db.forEach(cat => {
+                let html = `<h2 class="category-title"><i class="fa-solid fa-layer-group"></i> ${cat.category}</h2><div class="grid">`;
+                cat.items.forEach(item => {
+                    html += `
+                        <div class="service-card">
+                            <div>
+                                <div class="service-name">${item.name}</div>
+                                <div class="service-price">${item.price.toLocaleString('vi-VN')} VNĐ</div>
+                            </div>
+                            <button class="btn btn-primary" onclick="addToCart('${item.name.replace(/'/g, "\\'")}', ${item.price})">
+                                <i class="fa-solid fa-cart-plus"></i> Thêm vào giỏ
+                            </button>
+                        </div>
+                    `;
+                });
+                html += `</div>`;
+                container.innerHTML += html;
+            });
+        }
+
+        function filterServices() {
+            const query = document.getElementById('searchInput').value.toLowerCase();
+            document.querySelectorAll('.service-card').forEach(card => {
+                const name = card.querySelector('.service-name').innerText.toLowerCase();
+                card.style.display = name.includes(query) ? 'flex' : 'none';
+            });
+        }
+
+        function addToCart(name, price) {
+            if (!currentUser) {
+                showToast("Vui lòng Đăng Nhập để chọn dịch vụ!", "warning");
+                return showSection('authSection');
+            }
+            cart.push({ name, price });
+            updateCartUI();
+            showToast(`Đã thêm: ${name}`, "success");
+        }
+
+        function removeFromCart(idx) {
+            cart.splice(idx, 1);
+            updateCartUI();
+            renderModalCart();
+        }
+
+        function updateCartUI() {
+            document.getElementById('cartCount').innerText = cart.length;
+            const total = cart.reduce((s, i) => s + i.price, 0);
+            document.getElementById('cartTotal').innerText = total.toLocaleString('vi-VN') + 'đ';
+            document.getElementById('cartBar').style.display = (currentUser && cart.length > 0) ? 'flex' : 'none';
+        }
+
+        function openCheckoutModal() {
+            if (cart.length === 0) return showToast("Giỏ hàng của bạn đang trống!", "warning");
+            renderModalCart();
+            document.getElementById('checkoutModal').style.display = 'flex';
+        }
+
+        function closeCheckoutModal() {
+            document.getElementById('checkoutModal').style.display = 'none';
+        }
+
+        function renderModalCart() {
+            const container = document.getElementById('modalCartItems');
+            container.innerHTML = '';
+            cart.forEach((item, idx) => {
+                container.innerHTML += `
+                    <div class="cart-list-item">
+                        <span><strong>${item.name}</strong> (${item.price.toLocaleString()}đ)</span>
+                        <button class="btn btn-danger" style="padding: 4px 10px; font-size: 0.8rem;" onclick="removeFromCart(${idx})">
+                            <i class="fa-solid fa-trash"></i> Xóa
+                        </button>
+                    </div>
+                `;
+            });
+            const total = cart.reduce((s, i) => s + i.price, 0);
+            document.getElementById('modalTotal').innerText = total.toLocaleString('vi-VN') + ' VNĐ';
+        }
+
+        function processPayment() {
+            const robloxUser = document.getElementById('robloxUser').value.trim();
+            const robloxPass = document.getElementById('robloxPass').value.trim();
+            const robloxNote = document.getElementById('robloxNote').value.trim();
+
+            if (!robloxUser || !robloxPass) {
+                return showToast("Vui lòng nhập đầy đủ Tài Khoản và Mật Khẩu Roblox!", "warning");
+            }
+
+            const total = cart.reduce((s, i) => s + i.price, 0);
+
+            if (currentUser.balance < total) {
+                showToast("Số dư không đủ! Vui lòng nạp thêm tiền.", "error");
+                closeCheckoutModal();
+                return showSection('dashboardSection');
+            }
+
+            currentUser.balance -= total;
+            const userIdx = users.findIndex(u => u.username === currentUser.username);
+            if (userIdx !== -1) users[userIdx].balance = currentUser.balance;
+
+            saveStorage('bp_users', users);
+            saveStorage('bp_currentUser', currentUser);
+
+            const newOrder = {
+                id: 'DH' + Math.floor(100000 + Math.random() * 900000),
+                username: currentUser.username,
+                robloxUser,
+                robloxPass,
+                robloxNote,
+                items: [...cart],
+                total,
+                status: 'Đang Chờ Xử Lý',
+                date: new Date().toLocaleString('vi-VN')
+            };
+
+            orders.unshift(newOrder);
+            saveStorage('bp_orders', orders);
+
+            cart = [];
+            updateCartUI();
+            updateNav();
+            closeCheckoutModal();
+
+            showToast("Thanh toán thành công! Đơn hàng đã được gửi tới thợ cày.", "success");
+            showSection('myOrdersSection');
+        }
+
+        function submitCard() {
+            if (!currentUser) {
+                showToast("Vui lòng đăng nhập để nạp thẻ!", "warning");
+                return showSection('authSection');
+            }
+
+            const type = document.getElementById('cardType').value;
+            const amount = parseInt(document.getElementById('cardAmount').value);
+            const code = document.getElementById('cardCode').value.trim();
+            const seri = document.getElementById('cardSeri').value.trim();
+
+            if (!code || !seri) {
+                return showToast("Vui lòng nhập đúng Mã Thẻ và Số Seri!", "warning");
+            }
+
+            const newCard = {
+                id: 'CARD' + Math.floor(100000 + Math.random() * 900000),
+                username: currentUser.username,
+                type,
+                amount,
+                code,
+                seri,
+                status: 'Thành Công',
+                date: new Date().toLocaleString('vi-VN')
+            };
+
+            currentUser.balance += amount;
+            const userIdx = users.findIndex(u => u.username === currentUser.username);
+            if (userIdx !== -1) users[userIdx].balance = currentUser.balance;
+
+            cards.unshift(newCard);
+            saveStorage('bp_cards', cards);
+            saveStorage('bp_users', users);
+            saveStorage('bp_currentUser', currentUser);
+
+            document.getElementById('cardCode').value = '';
+            document.getElementById('cardSeri').value = '';
+
+            updateNav();
+            renderUserCardHistory();
+            showToast(`Nạp thẻ thành công! +${amount.toLocaleString()}đ vào ví.`, "success");
+        }
+
+        function renderUserCardHistory() {
+            const table = document.getElementById('userCardHistoryTable');
+            table.innerHTML = '';
+            
+            const userCards = cards.filter(c => c.username === currentUser.username);
+            if (userCards.length === 0) {
+                table.innerHTML = `<tr><td colspan="6" style="text-align:center; color: var(--text-muted);">Chưa có lịch sử nạp thẻ nào.</td></tr>`;
+                return;
+            }
+
+            userCards.forEach(c => {
+                table.innerHTML += `
+                    <tr>
+                        <td>${c.date}</td>
+                        <td><strong>${c.type}</strong></td>
+                        <td style="color: var(--success-color); font-weight:bold;">${c.amount.toLocaleString()}đ</td>
+                        <td>${c.code}</td>
+                        <td>${c.seri}</td>
+                        <td><span class="status-badge status-completed">${c.status}</span></td>
+                    </tr>
+                `;
+            });
+        }
+
+        function renderUserOrderHistory() {
+            const table = document.getElementById('userOrderHistoryTable');
+            table.innerHTML = '';
+
+            const userOrders = orders.filter(o => o.username === currentUser.username);
+            if (userOrders.length === 0) {
+                table.innerHTML = `<tr><td colspan="6" style="text-align:center; color: var(--text-muted);">Chưa có đơn hàng cày thuê nào.</td></tr>`;
+                return;
+            }
+
+            userOrders.forEach(o => {
+                const itemList = o.items.map(i => i.name).join(', ');
+                let statusClass = 'status-pending';
+                if (o.status === 'Hoàn Thành') statusClass = 'status-completed';
+                if (o.status === 'Đã Hủy') statusClass = 'status-rejected';
+
+                table.innerHTML += `
+                    <tr>
+                        <td><strong>${o.id}</strong></td>
+                        <td>${o.date}</td>
+                        <td><span style="color: var(--accent-color);">${o.robloxUser}</span></td>
+                        <td>${itemList}</td>
+                        <td style="color: var(--success-color); font-weight:bold;">${o.total.toLocaleString()}đ</td>
+                        <td><span class="status-badge ${statusClass}">${o.status}</span></td>
+                    </tr>
+                `;
+            });
+        }
+
+        function renderAdmin() {
+            if (!currentUser || currentUser.role !== 'admin') {
+                showToast("Bạn không có quyền truy cập trang Admin!", "error");
+                return showSection('shopSection');
+            }
+
+            const priceContainer = document.getElementById('adminPriceContainer');
+            priceContainer.innerHTML = '';
+
+            db.forEach((cat, cIdx) => {
+                let html = `<h3 style="color: var(--accent-color); margin: 20px 0 10px 0;">${cat.category}</h3>`;
+                cat.items.forEach((item, iIdx) => {
+                    html += `
+                        <div class="admin-item-row">
+                            <input type="text" value="${item.name}" id="admin_name_${cIdx}_${iIdx}">
+                            <input type="number" value="${item.price}" id="admin_price_${cIdx}_${iIdx}">
+                            <span style="color: var(--text-muted); font-size: 0.85rem;">VNĐ</span>
+                        </div>
+                    `;
+                });
+                priceContainer.innerHTML += html;
+            });
+
+            const ordersTable = document.getElementById('adminOrdersTable');
+            ordersTable.innerHTML = '';
+
+            if (orders.length === 0) {
+                ordersTable.innerHTML = `<tr><td colspan="8" style="text-align:center;">Chưa có đơn hàng nào từ khách.</td></tr>`;
+            } else {
+                orders.forEach((o) => {
+                    const itemList = o.items.map(i => i.name).join('<br>• ');
+                    ordersTable.innerHTML += `
+                        <tr>
+                            <td><strong>${o.id}</strong></td>
+                            <td>${o.username}</td>
+                            <td style="color: var(--accent-color); font-weight:bold;">${o.robloxUser}</td>
+                            <td style="color: var(--warning-color);">${o.robloxPass}</td>
+                            <td style="font-size: 0.85rem;">${o.robloxNote || 'Không'}</td>
+                            <td style="font-size: 0.85rem;">• ${itemList}</td>
+                            <td style="color: var(--success-color); font-weight:bold;">${o.total.toLocaleString()}đ</td>
+                            <td>
+                                <select onchange="updateOrderStatus('${o.id}', this.value)" style="padding: 4px; border-radius: 4px; background: var(--bg-primary); color: white; border: 1px solid var(--border-color);">
+                                    <option value="Đang Chờ Xử Lý" ${o.status === 'Đang Chờ Xử Lý' ? 'selected' : ''}>Đang Chờ</option>
+                                    <option value="Đang Cày" ${o.status === 'Đang Cày' ? 'selected' : ''}>Đang Cày</option>
+                                    <option value="Hoàn Thành" ${o.status === 'Hoàn Thành' ? 'selected' : ''}>Hoàn Thành</option>
+                                    <option value="Đã Hủy" ${o.status === 'Đã Hủy' ? 'selected' : ''}>Đã Hủy</option>
+                                </select>
+                            </td>
+                        </tr>
+                    `;
+                });
+            }
+
+            const cardsTable = document.getElementById('adminCardsTable');
+            cardsTable.innerHTML = '';
+
+            if (cards.length === 0) {
+                cardsTable.innerHTML = `<tr><td colspan="8" style="text-align:center;">Chưa có thẻ nạp nào.</td></tr>`;
+            } else {
+                cards.forEach(c => {
+                    cardsTable.innerHTML += `
+                        <tr>
+                            <td>${c.username}</td>
+                            <td>${c.date}</td>
+                            <td><strong>${c.type}</strong></td>
+                            <td>${c.amount.toLocaleString()}đ</td>
+                            <td>${c.code}</td>
+                            <td>${c.seri}</td>
+                            <td><span class="status-badge status-completed">${c.status}</span></td>
+                            <td><button class="btn btn-danger" style="padding: 2px 6px; font-size: 0.75rem;" onclick="deleteCard('${c.id}')">Xóa</button></td>
+                        </tr>
+                    `;
+                });
+            }
+        }
+
+        function saveAdminPrices() {
+            db.forEach((cat, cIdx) => {
+                cat.items.forEach((item, iIdx) => {
+                    const nameInput = document.getElementById(`admin_name_${cIdx}_${iIdx}`);
+                    const priceInput = document.getElementById(`admin_price_${cIdx}_${iIdx}`);
+                    if (nameInput && priceInput) {
+                        item.name = nameInput.value;
+                        item.price = parseInt(priceInput.value) || 0;
+                    }
+                });
+            });
+
+            saveStorage('bp_db', db);
+            showToast("Đã lưu bảng giá mới vĩnh viễn!", "success");
+            renderShop();
+        }
+
+        function updateOrderStatus(orderId, newStatus) {
+            const order = orders.find(o => o.id === orderId);
+            if (order) {
+                order.status = newStatus;
+                saveStorage('bp_orders', orders);
+                showToast(`Đã cập nhật đơn ${orderId} thành: ${newStatus}`, "info");
+            }
+        }
+
+        function deleteCard(cardId) {
+            cards = cards.filter(c => c.id !== cardId);
+            saveStorage('bp_cards', cards);
+            renderAdmin();
+            showToast("Đã xóa thẻ nạp khỏi lịch sử admin.", "info");
+        }
+
+        updateNav();
+        renderShop();
+    </script>
+</body>
+</html>
